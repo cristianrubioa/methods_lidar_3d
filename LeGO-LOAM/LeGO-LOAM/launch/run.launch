@@ -6,7 +6,7 @@
     <remap from="/velodyne_points" to="kitti/velo/pointcloud" />
 
     <node pkg="pcl_ros" type="pointcloud_to_pcd" name="pointcloud_to_pcd"> 
-    <remap from="input" to="/laser_cloud_map"/>
+    <remap from="input" to="/laser_cloud_surround"/>
     <param name="prefix" value="$(arg OUTPUT_MAP)"/>
     </node>
 

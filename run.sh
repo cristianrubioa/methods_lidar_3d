@@ -96,10 +96,10 @@ then
     EXE roslaunch aloam_velodyne aloam_velodyne_HDL_64.launch INPUT:=$INPUT_FILE OUTPUT_TRAJ:=$OUTPUT_TRAJ OUTPUT_MAP:=$OUTPUT_MAP ; FILTER
 elif [ $METHOD = "floam" ]
 then
-    EXE roslaunch floam floam.launch INPUT:=$INPUT_FILE OUTPUT_TRAJ:=$OUTPUT_TRAJ OUTPUT_MAP:=$OUTPUT_MAP ; FILTER
+    EXE roslaunch floam floam_mapping.launch INPUT:=$INPUT_FILE OUTPUT_TRAJ:=$OUTPUT_TRAJ OUTPUT_MAP:=$OUTPUT_MAP ; FILTER
 elif [ $METHOD = "iscloam" ]
 then
-    EXE roslaunch iscloam iscloam.launch INPUT:=$INPUT_FILE OUTPUT_TRAJ:=$OUTPUT_TRAJ OUTPUT_MAP:=$OUTPUT_MAP ; FILTER
+    EXE roslaunch iscloam iscloam_mapping.launch INPUT:=$INPUT_FILE OUTPUT_TRAJ:=$OUTPUT_TRAJ OUTPUT_MAP:=$OUTPUT_MAP ; FILTER
 elif [ $METHOD = "legoloam" ]
 then
     EXE roslaunch lego_loam run.launch INPUT:=$INPUT_FILE OUTPUT_TRAJ:=$OUTPUT_TRAJ OUTPUT_MAP:=$OUTPUT_MAP ; FILTER
