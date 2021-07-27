@@ -1,5 +1,16 @@
 # methods_lidar_3d
 
+## Brief 
+ 
+[![](https://img.shields.io/badge/ROS-239120?style=for-the-badge&logo=ros&logoColor=white)](https://www.ros.org/) [![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://www.cplusplus.com/) [![](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/) [![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+
+> Light detection and ranging LIDAR systems on-board mobile platforms are in rapid advancement for real-time mapping applications. Modern 3D laser scanners have a high data rate which, coupled with the complexity of their processing methods, makes simultaneous online localisation and mapping (SLAM) a computational challenge. Different 3D LiDAR SLAM algorithms have emerged in recent years, most notably LiDAR Odometry and Mapping and its derivatives.
+
+This repository carries out an implementation of the A-LOAM, FLOAM, ISCLOAM and LeGO-LOAM algorithms and a respective comparison with the training sequences of the KITTI data set (00-10 that have groundtruth) that includes different environments and routes acquired by the Velodyne HDL-64E LiDAR sensor.
+To speed up the unit tests for each method and sequence: 1) a script is added that installs the corresponding dependencies. 2) An execution environment is created that allows choosing the desired method and sequence, and at the end of the process the corresponding path and map is generated.
+
+
+
 ## Menu
 
   - [**Package dependency**](#dependency)
@@ -13,6 +24,8 @@
   - [**Run the package**](#run-the-package)
 
   - [**Paper**](#paper)
+  
+  - [**Results**](#results)
 
   - [**Related Package**](#related-package)
 
@@ -89,6 +102,46 @@ Download datasets to test the functionality of the package:
 |    08    | Urban+Country |   808×391      |  4071  |    3222.795    | [Mega](https://mega.nz/file/EYoWUaZQ#jLToiVIUf9GBxb_su_1Lx0hw1EhB7C3D1Y5SLWMGNRQ) / [Drive](https://drive.google.com/file/d/1Z7TQqYMyFKeRnqR4vgrNjMPkXQy9G-U_/view?usp=sharing) | 7.63 GB  |
 |    09    | Urban+Country |   465×568      |  1591  |    1705.051    | [Mega](https://mega.nz/file/YZoEBDrT#rzMU1x_9aMtgOSKa3ctMLoxRl_K6ssw-SdaHuxr0TjI) / [Drive](https://drive.google.com/file/d/1h5Dtz3DRu8Avra5JyEKdEJDZb4cZL1xk/view?usp=sharing) | 3.01 GB  |
 |    10    | Urban+Country |   671×177      |  1201  |    919.518     | [Mega](https://mega.nz/file/AZgEGTgR#l3JUGuyyHI-QGTQG9RQUg5evpTNWtrnwRGWUY9j1ztQ) / [Drive](https://drive.google.com/file/d/1ZCMO646624y8rv_gYqiDh4UiKBoi4Gdi/view?usp=sharing) | 2.31 GB  |
+
+## Results 
+### Paths:
+00 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/00.png" width="200"> 01 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/01.png" width="200"> 02 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/02.png" width="200"> 03 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/03.png" width="200"> 
+
+04 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/04.png" width="200"> 05 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/05.png" width="200"> 06 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/06.png" width="200"> 07 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/07.png" width="200"> 
+
+08 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/08.png" width="200"> 09 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/09.png" width="200"> 10 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/paths/10.png" width="200">
+
+
+### Maps: 
+#### A-LOAM   -|-   FLOAM   -|-   ISCLOAM   -|-   LeGO-LOAM
+
+00 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/00_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/00_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/00_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/00_legoloam.png" width="110"> |
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/01_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/01_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/01_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/01_legoloam.png" width="110"> 01
+
+02 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/02_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/02_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/02_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/02_legoloam.png" width="110"> |
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/03_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/03_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/03_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/03_legoloam.png" width="110"> 03
+
+04 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/04_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/04_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/04_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/04_legoloam.png" width="110"> |
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/05_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/05_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/05_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/05_legoloam.png" width="110"> 05
+
+06 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/06_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/06_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/06_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/06_legoloam.png" width="110"> |
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/07_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/07_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/07_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/07_legoloam.png" width="110"> 07
+
+08 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/08_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/08_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/08_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/08_legoloam.png" width="110"> |
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/09_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/09_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/09_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/09_legoloam.png" width="110"> 09
+
+10 <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/10_aloam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/10_floam.png" width="110"> <img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/10_iscloam.png" width="110">
+<img src = "https://github.com/cristianrubioa/methods_lidar_3d/blob/main/Demo/results/maps/10_legoloam.png" width="110"> 
 
 ## Related Package
 
